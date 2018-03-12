@@ -12,19 +12,71 @@ a {
   background-color: #212121;
   color: white;
 }
-
 .greeting-content {
-  text-align: center;
-  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  height: 90vh;
 }
+/*header*/
 header {
-  height: 40px;
+  height: 10vh;
+  order: 1;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+header a{
+  font-family: 'Aldrich', sans-serif;
+  color: #ffeb3b;
+  font-size: 21px;
+  text-decoration: none;
+  font-weight: 600;
+}
+/*main*/
 main {
-  padding: 220px 0;
+  flex-grow: 1;
+  order: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-flow: inherit;
+  color: #ffeb3b;
+}
+main p {
+  font-size: 14px;
+}
+main h1{
+  font-size: 32px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+/*footer*/
+@keyframes scroll-down {
+    from {height: 5px;}
+    to {height: 50px;}
 }
 footer {
-  height: 40px;
+  height: 90px;
+  order: 2;
   text-align: center;
+  color: #ffeb3b;
+}
+footer p{
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+footer span{
+  background: #ffeb3b;
+  height: 50px;
+  width: 2px;
+  display: inline-block;
+  animation: scroll-down 2s ease-in infinite;
+}
+/*effect*/
+.hide-content {
+  opacity: 0;
+  height: 0;
+  transition: height 1s linear, opacity 0.5s ease-out;
+
 }
