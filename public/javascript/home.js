@@ -1,4 +1,5 @@
 $(window).scroll(function (event) {
   console.log('scroll active');
-  $('.greeting-content').addClass('hide-content');
+  window.location.href = window.location.href + "about";
+  // $('.greeting-content').addClass('hide-content');
 });
