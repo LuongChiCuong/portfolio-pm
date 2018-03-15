@@ -10,26 +10,36 @@ a {
 }
 
 .wrapper {
-  background-color: #212121;
-  color: white;
+
 }
 /*header*/
 header {
-  height: 50px;;
   order: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
+  background-color: #212121;
+  color: white;
 }
-header a{
+header a#logo{
   font-family: 'Aldrich', sans-serif;
   color: #ffeb3b;
   font-size: 21px;
   text-decoration: none;
   font-weight: 600;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 /* nav */
-nav > ul {
+header > nav {
+  width: 100%;
+}
+header > nav > ul {
   display: flex;
   flex-flow: row;
   padding: 0;
@@ -37,7 +47,7 @@ nav > ul {
   align-items: center;
   justify-content: center;
 }
-nav > ul> li {
+header > nav > ul> li {
   list-style: none;
   flex-grow: 1;
   align-self: center;
@@ -46,13 +56,13 @@ nav > ul> li {
   font-size: 14px;
   letter-spacing: 1.5px;
 }
-nav > ul> li > a{
+header > nav > ul> li > a{
   color: inherit;
 }
-nav > ul > li.active {
+header > nav > ul > li.active {
   color: #ffeb3b;
 }
-nav > ul > li:nth-child(2) {
+header > nav > ul > li:nth-child(2) {
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
